@@ -3,14 +3,14 @@
 ## Objective
 
 
-This Network Analysis Lab was aimed to implimate my Wireshark PCAP analysis skills and add onto my Cybersecurity job simulation that I completed on Forage for the company AIG. The Job simulation had to do with Apache Log4j Vulnerability within the company and I had to do tasks to Identify and look into the Vulnerability and using Python to bruteforce the password encryption. With his hands-on Lab that I connected together was designed to deepen understanding on Apache Log4j and how it would look like in a PCAP/scenario, improve my network security, familiarize with attack patterns, and defensive strategies.
+This Network Analysis Lab was aimed to impliment my Wireshark PCAP analysis skills and add onto my Cybersecurity job simulation that I completed on Forage for the company AIG. The Job simulation had to do with Apache Log4j Vulnerability within the company and I had to do tasks to Identify and look into the Vulnerability and using Python to bruteforce an encrypted password. With this hands-on Lab I can deepen my understanding on Apache Log4j and how it would look like in a PCAP/scenario, improve my network security, familiarize with attack patterns, and defensive strategies.
 
 ### Skills Learned
 
 
 - Advanced understanding of Apache Log4j Vulnerbility.
 - Proficiency in analyzing and interpreting a PCAP.
-- Development of recognizing attack patterns and critical thinking/problem-solving skills in cybersecurity. .
+- Development of recognizing attack patterns and critical thinking/problem-solving skills in cybersecurity. 
 - Enhanced knowledge of network protocols and security vulnerabilities.
 - More expirence with malware analysis, (C2) and data exfiltration tecniques
 
