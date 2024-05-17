@@ -30,33 +30,59 @@ Lab overview : <br/>
 <img src="https://i.imgur.com/fg42cJE.png" height="80%" width="80%" alt="Lab overview"/>
 <br />
 <br />
+ 
+___
 
+<p align="center"> 
 AIG Cybersecurity Job simulation Overview, you can see which teams that are affected by this Vulnerability:  <br/>
 <img src="https://i.imgur.com/z1Z09XF.png" height="80%" width="80%" alt="Set up network on DC VM"/>
 <br />
 <br />
+
+ ___
+
+<p align="center"> 
 This is the WireShark PCAP for the Apache Log4j vulnerability that I used: <br/>
 <img src="https://i.imgur.com/vfG5Dea.png" height="80%" width="80%" alt="DHCP IPv4 network set up"/>
 <br />
 <br />
+ 
+___
+
+<p align="center"> 
 
 I started off by looking at endpoints to view the locations to see where the IP's are coming from. As you can see there are a lot of different source IP’s, which showed me that this was a distributed attack/scan coming from different places:  <br/>
 <img src="https://i.imgur.com/d890etu.png" height="80%" width="80%" alt="enter the powershell on DC VM"/>
 <br />
 <br />
+___
+
+<p align="center"> 
 After taking a look at the endpoints, I checked the conversations to see who was sending/recieving the highest amount of packets to see a pattern. as you can see the IP address (198.71.247.91) had the highest :  <br/>
 <img src="https://i.imgur.com/D7pRFcf.png" height="80%" width="80%" alt="Once the page is loaded use the link to access OpenVAS and use the username to log in"/>
 <br />
 <br />
+
+ ___
+
+<p align="center"> 
 I then applied a display filter for the IP address, As you can see in packet 444 Under the “POST HTTP”, it shows the user-agent “jndi” with a base64 code which we will focus more on:  <br/>
 <img src="https://i.imgur.com/GGdMjoa.png" height="80%" width="80%" alt="Once the page is loaded use the link to access OpenVAS and use the username to log in"/>
 <br />
 <br />
+
+ ___
+
+<p align="center"> 
 After decrypting from base64, we can see what the malicious code was trying to do. I also entered the IP address into VirusTotal and as you can see other community members also identified it as malicious Log4 shell IP. This attack would allow the attacker to remote execute and access anything they want (Zoom in if needed, click on image) :  <br/>
 <img src="https://i.imgur.com/hJr7sls.png" height="80%" width="80%" alt="Once the page is loaded use the link to access OpenVAS and use the username to log in"/>
 <img src="https://i.imgur.com/wayNKUX.png" height="80%" width="80%" alt="Once the page is loaded use the link to access OpenVAS and use the username to log in"/>
 <br />
 <br />
+
+___
+
+<p align="center"> 
 
 Now what I want to see is if the server ever does a TCP “SYN”/ initiates the callback which would then allow the Apache Log4j exploit to occur which it did not :)  <br/>
 <img src="https://i.imgur.com/eIv77Hc.png" height="80%" width="80%" alt="Once the page is loaded use the link to access OpenVAS and use the username to log in"/>
